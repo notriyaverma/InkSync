@@ -109,17 +109,17 @@ Alternative (Windows): Install and start Memurai (a Redis alternative): https://
 InkSync utilizes an event-driven, distributed architecture to achieve seamless, conflict-free collaboration.
 
 The core synchronization flow is:
-Client Edit: A user makes a change, and Yjs generates a CRDT update.
-WebSocket Send: The update is sent to the Django Channels server.
-Redis Broadcast: The server publishes the update to the Redis Pub/Sub layer.
-Client Receive: Redis broadcasts the update to all connected clients (including the sender's).
-Conflict-Free Merge: Each client's Yjs engine merges the update into its local document state, ensuring conflict-free results.
+* Client Edit: A user makes a change, and Yjs generates a CRDT update.
+* WebSocket Send: The update is sent to the Django Channels server.
+* Redis Broadcast: The server publishes the update to the Redis Pub/Sub layer.
+* Client Receive: Redis broadcasts the update to all connected clients (including the sender's).
+* Conflict-Free Merge: Each client's Yjs engine merges the update into its local document state, ensuring conflict-free results.
 
 This architecture ensures:
-Conflict-free merging
-Sub-millisecond sync
-Scalable WebSocket broadcasts
-Multi-node deployment readiness
+* Conflict-free merging
+* Sub-millisecond sync
+* Scalable WebSocket broadcasts
+* Multi-node deployment readiness
 
 ## 🤝 Contributing
 Pull requests are welcome! Feel free to open an issue to request features or report bugs.
