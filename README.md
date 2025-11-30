@@ -74,7 +74,7 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 
-2️⃣ Start Redis
+### 2️⃣ Start Redis
 Redis is essential for the Pub/Sub layer and must be running on port 6379.
 
 Recommended (Docker):
@@ -84,17 +84,18 @@ Bash
 docker run -p 6379:6379 -d redis:latest
 Alternative (Windows): Install and start Memurai (a Redis alternative): https://www.memurai.com/get-memurai
 
-3️⃣ Frontend Setup (React + Vite)
+### 3️⃣ Frontend Setup (React + Vite)
 Bash
 
 cd app
 npm install
 npm run dev
-Frontend → http://localhost:3000
 
-Backend → http://localhost:8000
+### Frontend → http://localhost:3000
 
-🧪 How Real-Time Sync Works
+### Backend → http://localhost:8000
+
+## 🧪 How Real-Time Sync Works
 InkSync utilizes an event-driven, distributed architecture to achieve seamless, conflict-free collaboration.
 
 The core synchronization flow is:
@@ -120,8 +121,8 @@ Scalable WebSocket broadcasts
 Multi-node deployment readiness
 
 
-🤝 Contributing
+## 🤝 Contributing
 Pull requests are welcome! Feel free to open an issue to request features or report bugs.
 
-📝 License
+## 📝 License
 This project is licensed under the MIT License.
