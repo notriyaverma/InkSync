@@ -65,9 +65,9 @@ InkSync/ │ ├── app-server/ # Django backend │ ├── core/ # Settin
 ### 1️⃣ Backend Setup (Django + Channels)
 cd app-server
 
-# Create and activate virtual environment
+### Create and activate virtual environment
 python -m venv envenv # Windows
-# or
+### or
 source env/bin/activate # macOS/Linux
 
 pip install -r requirements.txt
