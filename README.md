@@ -76,16 +76,16 @@ These improvements are perfect for resume and portfolio building:
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Backend Setup (Django + Channels)
-cd app-server
+`cd app-server`
 
 ### Create and activate virtual environment
-python -m venv envenv # Windows
+`python -m venv envenv # Windows`
 ### or
-source env/bin/activate # macOS/Linux
+`source env/bin/activate # macOS/Linux`
 
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py runserver
+`pip install -r requirements.txt`
+` python manage.py migrate`
+`python manage.py runserver`
 
 ### 2️⃣ Start Redis
 Redis is essential for the Pub/Sub layer and must be running on port 6379.
@@ -94,45 +94,35 @@ Recommended (Docker):
 
 Bash
 
-docker run -p 6379:6379 -d redis:latest
+`docker run -p 6379:6379 -d redis:latest`
 Alternative (Windows): Install and start Memurai (a Redis alternative): https://www.memurai.com/get-memurai
 
 ### 3️⃣ Frontend Setup (React + Vite)
 Bash
 
-cd app
-npm install
-npm run dev
+`cd app`
+`npm install`
+`npm run dev`
 
-### Frontend → http://localhost:3000
+### Frontend →`http://localhost:3000`
 
-### Backend → http://localhost:8000
+### Backend → `http://localhost:8000`
 
 ## 🧪 How Real-Time Sync Works
 InkSync utilizes an event-driven, distributed architecture to achieve seamless, conflict-free collaboration.
 
 The core synchronization flow is:
-
 Client Edit: A user makes a change, and Yjs generates a CRDT update.
-
 WebSocket Send: The update is sent to the Django Channels server.
-
 Redis Broadcast: The server publishes the update to the Redis Pub/Sub layer.
-
 Client Receive: Redis broadcasts the update to all connected clients (including the sender's).
-
 Conflict-Free Merge: Each client's Yjs engine merges the update into its local document state, ensuring conflict-free results.
 
 This architecture ensures:
-
 Conflict-free merging
-
 Sub-millisecond sync
-
 Scalable WebSocket broadcasts
-
 Multi-node deployment readiness
-
 
 ## 🤝 Contributing
 Pull requests are welcome! Feel free to open an issue to request features or report bugs.
