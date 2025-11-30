@@ -18,7 +18,7 @@ Multiple users can edit the same document simultaneously, view each other’s cu
 
 ---
 
-### 🔥 Upcoming Enhancements (Your Add-on Features)
+### 🔥 Upcoming Enhancements
 These improvements are perfect for resume and portfolio building:
 
 #### 🚹 Live User Presence + Cursors 2.0
