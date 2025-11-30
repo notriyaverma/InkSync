@@ -92,13 +92,10 @@ Redis is essential for the Pub/Sub layer and must be running on port 6379.
 
 Recommended (Docker):
 
-Bash
-
 `docker run -p 6379:6379 -d redis:latest`
 Alternative (Windows): Install and start Memurai (a Redis alternative): https://www.memurai.com/get-memurai
 
 ### 3️⃣ Frontend Setup (React + Vite)
-Bash
 
 `cd app`
 `npm install`
