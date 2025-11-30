@@ -56,7 +56,22 @@ These improvements are perfect for resume and portfolio building:
 ---
 
 ## 📂 Project Structure
-InkSync/ │ ├── app-server/ # Django backend │ ├── core/ # Settings, routing, ASGI config │ ├── editor/ # WebSocket handlers, models │ ├── manage.py │ └── requirements.txt │ ├── app/ # React frontend │ ├── src/ │ ├── package.json │ ├── vite.config.ts │ └── index.html │ └── README.md
+InkSync/
+│
+├── app-server/         
+│   ├── core/           
+│   ├── editor/        
+│   ├── manage.py
+│   ├── requirements.txt
+│
+├── app/                
+│   ├── src/
+│   ├── package.json
+│   ├── vite.config.ts
+│   └── index.html
+│
+└── README.md
+
 
 ---
 
